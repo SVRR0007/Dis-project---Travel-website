@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, user-scalable=no">
+	<meta charset="utf-8" />
+	<title>Travel Cookie</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="stylesheet" href="login.css">
+</head>
+<body>
+	<nav>
+		<ul>
+			<a href="index.html"><li class="logo"><img src="images/logo.jpg" width="50" height="50"><span>Travel</span> Cookie</li></a>
+			<li><a href="index.html">Home</a></li>
+			<li><a href="#">Destinations</a>
+				<ul class="dropdown-menu">
+					<li><a href="Countries/Italy/Venice.html">Venice</a></li>
+					<li><a href="Countries/Switzerland/Geneva.html">Geneva</a></li>
+					<li><a href="Countries/Switzerland/intrerlaken.html">Intelaken</a></li>
+					<li><a href="Countries/Thailand/PHUKET.html">Phuket</a></li>
+					<li><a href="Countries/Thailand/CHAING_MAI.html">Chiang Mai</a></li>
+					<li><a href="Countries/Thailand/BANGKOK.html">Bangkok</a></li>
+				</ul></li>
+			<li><a href="traveltips.html">Travel Tips</a></li>
+			<li><a href="aboutus.html">About Us</a></li>
+			<li><a href="login.html">Login</a></li>
+		</ul>
+	</nav>
+    <div class="container">
+        <form id="login-form" class="login-form" method="post" action="#">
+          <h2>Log in</h2>
+          <div class="form-control">
+            <label for="login-email">Email:</label>
+            <input type="email" id="login-email" name="email" required>
+          </div>
+          <div class="form-control">
+            <label for="login-password">Password:</label>
+            <input type="password" id="login-password" name="password" required>
+            <span class="show-password" onclick="togglePassword('login-password')">Show</span>
+          </div>
+          <button type="submit" class="btn">Login</button>
+          <p class="signup-link">Don't have an account? <a href="#" onclick="switchForm()">Sign up</a></p>
+        </form>
+
+        <form id="signup-form" class="signup-form" method="post" action="#">
+            <h2>Sign Up</h2>
+            <div class="form-control">
+              <label for="signup-name">Name:</label>
+              <input type="text" id="signup-name" name="name" required>
+            </div>
+            <div class="form-control">
+              <label for="signup-email">Email:</label>
+              <input type="email" id="signup-email" name="email" required>
+            </div>
+            <div class="form-control">
+              <label for="signup-password">Password:</label>
+              <input type="password" id="signup-password" name="password" required>
+              <span class="show-password" onclick="togglePassword('signup-password')">Show</span>
+            </div>
+            
+            <button type="submit" class="btn btnon">Sign Up</button>
+            <p class="login-link">Already have an account? <a href="#" onclick="switchForm()">Login</a></p>
+          </form>
+    </div>
+      <script src="login.js"></script>
+    <footer>
+		<div class="footer-content">
+			<h3 style="color: #f9b537;">ISM6225</h3>
+			<p>This Website has been created as a part of course project in ISM6225</p>
+		</div>
+		<div class="footer-bottom">
+			<p>© 2023 Travel Cookie. All rights reserved.</p>
+		</div>
+</footer>
+</body>

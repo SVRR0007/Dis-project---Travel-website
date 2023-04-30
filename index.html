@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, user-scalable=no">
+	<title>Travel Cookie</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" type="text/css" href="style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.3/Chart.js"></script>
+</head>
+<body>
+	<nav>
+		<ul>
+			<a href="index.html"><li class="logo"><img src="images/logo.jpg" width="50" height="50"><span>Travel</span> Cookie</li></a>
+			<li><a href="index.html">Home</a></li>
+			<li><a href="#">Destinations</a>
+				<ul class="dropdown-menu">
+					<li><a href="Countries/Italy/Venice.html">Venice</a></li>
+					<li><a href="Countries/Switzerland/Geneva.html">Geneva</a></li>
+					<li><a href="Countries/Switzerland/intrerlaken.html">Intelaken</a></li>
+					<li><a href="Countries/Thailand/PHUKET.html">Phuket</a></li>
+					<li><a href="Countries/Thailand/CHAING_MAI.html">Chiang Mai</a></li>
+					<li><a href="Countries/Thailand/BANGKOK.html">Bangkok</a></li>
+				</ul></li>
+			<li><a href="traveltips.html">Travel Tips</a></li>
+			<li><a href="aboutus.html">About Us</a></li>
+			<li><a href="login.html">Login</a></li>
+		</ul>
+	</nav>
+	<main>
+		<section>
+			<h2>Featured Destinations</h2>
+			<div class="color-bar"></div>
+			<ul class="featured-destinations">
+				<li>
+					<a href="Countries/Thailand/BANGKOK.html">
+						<img src="images/bangkok_card.jpg" width="300" height="300">
+						<h3>Bangkok</h3>
+					</a>
+				</li>
+				<li>
+					<a href="Countries/Italy/Rome.html">
+						<img src="images/rome_Card.jpg" width="300" height="300">
+						<h3>Rome</h3>
+					</a>
+				</li>
+				<li>
+					<a href="Countries/Switzerland/zurich.html">
+						<img src="images/zurich_card.jpg" width="300" height="300">
+						<h3>Zurich</h3>
+					</a>
+				</li>
+			</ul>
+		</section>
+		<br>
+		<section>
+			<h2>Featured Countries</h2>
+			<div class="color-bar"></div>
+			<ul class="featured-destinations">
+				<li>
+					<a href="Countries/Italy/Italy.html">
+						<img src="images/italy_card.jpg" width="300" height="300">
+						<h3>Italy</h3>
+					</a>
+				</li>
+				<li>
+					<a href="Countries/Switzerland/switzerland.html">
+						<img src="images/swiss_card.jpg" width="300" height="300">
+						<h3>Switzerland</h3>
+					</a>
+				</li>
+				<li>
+					<a href="Countries/Thailand/Thailand.html">
+						<img src="images/thai_card.jpg" width="300" height="300">
+						<h3>Thailand</h3>
+					</a>
+				</li>
+			</ul>
+		</section>
+	
+	<section>
+	<div id="chart-container">
+	<h2>Popular Countries by Visitors</h2>
+	<div class="color-bar"></div>
+	<canvas id="barchartexample" width="300" height="130"></canvas>
+	<script>
+		new Chart(document.getElementById("barchartexample"), {
+		  type: 'bar',
+		  data: {
+			labels: ["Italy", "Thailand", "Switzerland", "United Arab Emirates", "Brazil"],
+			datasets: [
+			  {
+				label: "Visitors (millions)",
+				backgroundColor: ["#3e95cd", "#8e5ea2", "#3cba9f", "#e8c3b9", "#c45850"],
+				data: [778934, 576267, 238934, 758084, 405733]
+			  }
+			]
+		  },
+		  options: {
+			maintainAspectRatio: false,
+      		responsive: true,
+			legend: { display: false },
+			title: {
+			  display: true,
+			  text: 'Popular Countries by Visitor Count (millions) in a year'
+			}
+			
+		  }
+		});
+		
+	  </script>
+	  </div>
+	  </section>
+	</main>
+	<footer>
+		<div class="footer-content">
+			<h3 style="color: #f9b537;">ISM6225</h3>
+			<p>This Website has been created as a part of course project in ISM6225</p>
+		</div>
+		<div class="footer-bottom">
+			<p>© 2023 Travel Cookie. All rights reserved.</p>
+		</div>
+</footer>
+</body>
